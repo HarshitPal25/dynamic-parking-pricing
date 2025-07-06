@@ -1,4 +1,4 @@
-# 🅿️ Dynamic Pricing for Urban Parking Lots
+# 🚗 Dynamic Pricing for Urban Parking Lots
 
 This project demonstrates a **real-time dynamic pricing system** for urban parking lots.  
 It uses **Pathway** for streaming data processing and a demand-based pricing model combining occupancy, queue length, traffic conditions, vehicle type, and special days.
