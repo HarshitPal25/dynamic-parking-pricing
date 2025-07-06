@@ -128,13 +128,13 @@ pw.run()
 5. (Optional) Sink results to JSONLines or CSV if needed later.
 
 📝 Notes
-Ensure that any text labels in numeric columns are replaced before running Pathway.
+* Ensure that any text labels in numeric columns are replaced before running Pathway.
 
 🚀 Future Enhancements
-Add real-time dashboards with Panel or Bokeh
+* Add real-time dashboards with Panel or Bokeh
 
-Integrate weather and seasonal data
+* Integrate weather and seasonal data
 
-Implement forecasting and auto-pricing adjustments
+* Implement forecasting and auto-pricing adjustments
 
-Provide API endpoints for dynamic retrieval of prices
+* Provide API endpoints for dynamic retrieval of prices
