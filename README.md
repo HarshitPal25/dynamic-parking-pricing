@@ -109,3 +109,32 @@ The pricing model calculates demand using this formula:
 **Bounding:**
 - Minimum price: 0.5 × BASE_PRICE
 - Maximum price: 2.0 × BASE_PRICE
+
+
+▶️ How to Run
+In Colab or Jupyter Notebook:
+
+1. Clean your dataset as described.
+
+2. Load the cleaned CSV into Pathway using replay_csv.
+
+3. Define your aggregation and pricing logic.
+
+4. Execute:
+
+%%capture --no-display
+pw.run()
+
+5. (Optional) Sink results to JSONLines or CSV if needed later.
+
+📝 Notes
+Ensure that any text labels in numeric columns are replaced before running Pathway.
+
+🚀 Future Enhancements
+Add real-time dashboards with Panel or Bokeh
+
+Integrate weather and seasonal data
+
+Implement forecasting and auto-pricing adjustments
+
+Provide API endpoints for dynamic retrieval of prices
