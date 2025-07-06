@@ -73,3 +73,39 @@ Defined a Pathway schema specifying types for all fields:
 
 ### ✅ **Step 7 – Execution**
 - Ran the pipeline using:
+  %%capture --no-display
+  pw.run()
+## 🧮 Pricing Model Formulae
+
+The pricing model calculates demand using this formula:
+
+\[
+\text{Demand} = \alpha \cdot \frac{\text{Occupancy}}{\text{Capacity}}
++ \beta \cdot \text{QueueLength}
+- \gamma \cdot \text{TrafficLevel}
++ \delta \cdot \text{IsSpecialDay}
++ \epsilon \cdot \text{VehicleTypeWeight}
+\]
+
+**Parameters Used:**
+- **ALPHA = 2.0** (occupancy impact)
+- **BETA = 0.5** (queue impact)
+- **GAMMA = 1.0** (traffic impact)
+- **DELTA = 1.5** (special day impact)
+- **EPSILON = 1.0** (vehicle impact)
+- **LAMBDA = 1.0** (scaling factor)
+- **BASE_PRICE = 10.0**
+
+**Normalization:**
+\[
+\text{NormalizedDemand} = \frac{\text{Demand}}{5.0}
+\]
+
+**Raw Price:**
+\[
+\text{RawPrice} = BASE\_PRICE \times (1 + LAMBDA \times NormalizedDemand)
+\]
+
+**Bounding:**
+- Minimum price: 0.5 × BASE_PRICE
+- Maximum price: 2.0 × BASE_PRICE
